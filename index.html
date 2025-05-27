@@ -24,6 +24,27 @@
         th {
             background-color: #f2f2f2;
         }
+
+        /* Адаптация для мобильных устройств */
+        @media only screen and (max-width: 768px) {
+            body {
+                margin: 10px;
+            }
+            th, td {
+                padding: 5px;
+                font-size: 14px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            body {
+                margin: 5px;
+            }
+            th, td {
+                padding: 3px;
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -42,6 +63,7 @@
         <option value="III курс">III курс</option>
     </select>
 
+    <br>
     <label for="day-select">Выберите день:</label>
     <select id="day-select" onchange="updateSchedule()">
         <option value="понедельник">Понедельник</option>
@@ -852,12 +874,14 @@
   <option value="">Все даты</option>
 </select>
 
-<label for="classFilter">Класс/Курс:</label>
+<br>
+    <label for="classFilter">Класс/Курс:</label>
 <select id="classFilter">
   <option value="">Все классы</option>
 </select>
 
-<label for="teacherFilter">Преподаватель:</label>
+<br>
+    <label for="teacherFilter">Преподаватель:</label>
 <select id="teacherFilter">
   <option value="">Все преподаватели</option>
 </select>
